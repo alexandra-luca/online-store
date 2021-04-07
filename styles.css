@@ -29,13 +29,30 @@ section {
 h2 {
 	position: absolute;
 	top: -1px;
-	right: -1px;
-	width: 150px;
+	left: -1px;
+	width: 250px;
 	margin: 0;
 	border: 1px solid black;
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.25em;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+h3 {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	width: 100px;
+	margin: 0;
+	border: 1px solid black;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.25em;
+	background-color: rgb(217, 137, 187);
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 section > div {
@@ -59,10 +76,22 @@ section > div > p {
 	background-color: rgb(60, 199, 97);
 }
 
+.pclass > div > img {
+	width: 250px;
+	height: 250px;
+}
+
 h1 {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2.75em;
+}
+
+h4 {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.75em;
+	margin: 20px 0;
 }
 
 body {
@@ -73,9 +102,44 @@ body {
 	background-color: white;
 	width: 100%;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	opacity: 0.5;
 	z-index: -1;
+}
+
+.navbar {
+	background-color: rgb(13, 133, 111);
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+form {
+	text-align: center;
+	padding-top: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.75em;
+}
+
+input {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+#page-title {
+	display: inline;
+}
+
+#title-container {
+	display: flex;
+  	justify-content: center;
+}
+
+.navbar a {
+	text-decoration: none;
+	color: #28004f;
+}
+.navbar a:hover {
+	color: #4c0096;
 }
