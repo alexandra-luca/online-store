@@ -1,5 +1,5 @@
 /* desktop */
-@media (min-width: 992px) {
+@media (min-width: 1700px) {
 	.pclass {
 		width: 33.333%;
 		float: left;
@@ -7,7 +7,7 @@
 }
 
 /* tablet */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 1140px) and (max-width: 1699px) {
 	.pclass {
 		width: 50%;
 		float: left;
@@ -96,6 +96,9 @@ h4 {
 
 body {
   	background-image: url('images/forest.jpg');
+  	min-width: 600px;
+
+  	font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 #body-opacity {
@@ -114,6 +117,7 @@ body {
 	padding-top: 20px;
 	padding-bottom: 10px;
 	position: relative;
+	margin-bottom: 15px;
 }
 
 form {
@@ -123,7 +127,8 @@ form {
 	font-size: 1.75em;
 }
 
-input {
+input,
+form button {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1em;
 }
@@ -148,6 +153,14 @@ input {
 #input_search {
 	position: absolute;
 	right: 8px;
+	bottom: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.25em;
+}
+
+#select_sort {
+	position: absolute;
+	left: 8px;
 	bottom: 8px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.25em;
@@ -183,4 +196,47 @@ input {
 #my-cart tr:nth-of-type(1) {
 	background-color: #4a0202;
 	color: white;
+}
+
+.button_add {
+	background-color: #86ed11;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+
+	position: absolute;
+	bottom: 0;
+}
+
+.button_delete {
+	background-color: #b80707;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+
+	position: absolute;
+	bottom: 0;
+	right: 250px;
+}
+
+.image-and-text {
+}
+
+.image-and-text img {
+	width: 250px;
+	height: 250px;
+	float: right;
+}
+
+.image-and-text p {
+	margin-top: 0;
+	padding-top: 50px;
+
+	padding-left: 10px;
+	padding-right: 10px;
+
+	max-height: 160px;
+	overflow: auto;
+}
+
+.pclass div {
+	height: 250px;
 }

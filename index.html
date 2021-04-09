@@ -3,6 +3,9 @@
 <head>
 	<title>Xendra Store</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com"> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div id="body-opacity"></div>
@@ -18,6 +21,13 @@
 			<a href="#" onclick="displayMyCart()">My cart</a>
 		</h4>
 		<input id="input_search" type="text" placeholder="Search" onchange="searchProduct()">
+		<select id="select_sort" onchange="sortProducts()">
+			<option hidden>Sort</option>
+			<option value="nameasc">By name (A to Z)</option>
+			<option value="namedesc">By name (Z to A)</option>
+			<option value="priceasc">By price (low to high)</option>
+			<option value="pricedesc">By price (high to low)</option>
+		</select>
 	</div>
 
 	<div id="products"></div>
@@ -27,12 +37,12 @@
 			<label>Name:</label><br>
 			<input id="input_name" type="text" placeholder="Awesome Mask"><br>
 			<label>Price:</label><br>
-			<input id="input_price" type="text" placeholder="$20.00"><br>
+			<input id="input_price" type="text" placeholder="20.00"><br>
 			<label>Description:</label><br>
 			<input id="input_desc" type="text"><br>
 			<label>Image URL:</label><br>
 			<input id="input_img" type="text"><br>
-			<input type="submit" value="Add" onclick="createNewProduct()">
+			<button value="Add" onclick="createNewProduct()">Add</button>
 		</form>
 	</div>
 
