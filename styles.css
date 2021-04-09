@@ -91,11 +91,11 @@ h4 {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.75em;
-	margin: 20px 0;
+	margin: 30px 0;
 }
 
 body {
-  	background-image: url('forest.jpg');
+  	background-image: url('images/forest.jpg');
 }
 
 #body-opacity {
@@ -113,6 +113,7 @@ body {
 	background-color: rgb(13, 133, 111);
 	padding-top: 20px;
 	padding-bottom: 10px;
+	position: relative;
 }
 
 form {
@@ -142,4 +143,12 @@ input {
 }
 .navbar a:hover {
 	color: #4c0096;
+}
+
+#input_search {
+	position: absolute;
+	right: 8px;
+	bottom: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.25em;
 }

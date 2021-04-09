@@ -3,69 +3,39 @@
 <head>
 	<title>Xendra Store</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script src="scripts.js" type="text/javascript"></script>
 </head>
 <body>
 	<div id="body-opacity"></div>
 	
 	<div class="navbar">
 		<div id="title-container">
-			<a href="index.html"><img src="logo.jpg" alt="Logo image" width="100" height="100"></a>
+			<a href="index.html"><img src="images/logo.jpg" alt="Logo image" width="100" height="100"></a>
 			<h1 id="page-title">endra Store</h1>
 		</div>
-		<h4><a href="#" onclick="displayProducts()">Products</a> | <a href="#" onclick="displayNewProduct()">New product</a></h4>
+		<h4>
+			<a href="#" onclick="displayProducts()">Products</a> | 
+			<a href="#" onclick="displayNewProduct()">New product</a> | 
+			<a href="#">My cart</a>
+		</h4>
+		<input id="input_search" type="text" placeholder="Search" onchange="searchProduct()">
 	</div>
 
-	<div id="products">
-		<section id="p1" class="pclass">
-			<div>
-				<h2>Patterned Mask</h2>
-				<h3>$10.99</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut odio eget nulla fermentum pulvinar. Donec pulvinar lacus non libero cursus, ut porttitor augue luctus. Donec euismod purus sem, at placerat mi condimentum ut. Nam luctus enim ut porta viverra. Morbi risus ipsum, venenatis a pretium eget, rutrum a urna.</p>
-				<img src="product1.jpg" alt="Patterned mask">
-			</div>
-		</section>
-
-		<section id="p2" class="pclass">
-			<div>
-				<h2>Glamorous Mask</h2>
-				<h3>$10.99</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor ligula eu sapien pretium sollicitudin. Suspendisse ac massa ante. Nulla efficitur nulla non est euismod, at mattis ligula interdum. Aliquam erat volutpat. Etiam facilisis accumsan ligula, convallis condimentum odio dictum eget. Donec porta interdum interdum. Ut eget odio malesuada, porttitor.</p>
-				<img src="product2.jpg" alt="Glamorous mask">
-			</div>
-		</section>
-
-		<section id="p3" class="pclass">
-			<div>
-				<h2>Retro Mask</h2>
-				<h3>$10.99</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor eros laoreet pretium convallis. Nulla elementum, ex ac dignissim condimentum, urna turpis commodo lacus, eu luctus magna nibh sit amet eros. Nunc dignissim efficitur luctus. Donec quis tincidunt turpis, et scelerisque ligula. Duis condimentum massa non vestibulum dictum. Curabitur euismod.</p>
-				<img src="product3.jpg" alt="Retro mask">
-			</div>
-		</section>
-
-		<section id="p4" class="pclass">
-			<div>
-				<h2>Watercolor Mask</h2>
-				<h3>$10.99</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo est, porttitor sed mi nec, gravida pulvinar nunc. Maecenas euismod, ligula semper pellentesque ultricies, sem urna pretium mi, quis ornare nibh diam sed odio. Maecenas pellentesque pharetra fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis.</p>
-				<img src="product4.jpg" alt="Watercolor mask">
-			</div>
-		</section>
-	</div>
+	<div id="products"></div>
 
 	<div id="new-product" style="display: none;">
 		<form>
 			<label>Name:</label><br>
-			<input type="text" placeholder="Awesome Mask"><br>
+			<input id="input_name" type="text" placeholder="Awesome Mask"><br>
 			<label>Price:</label><br>
-			<input type="text" placeholder="$20.00"><br>
+			<input id="input_price" type="text" placeholder="$20.00"><br>
 			<label>Description:</label><br>
-			<input type="text"><br>
+			<input id="input_desc" type="text"><br>
 			<label>Image URL:</label><br>
-			<input type="text"><br>
-			<input type="submit" value="Add">
+			<input id="input_img" type="text"><br>
+			<input type="submit" value="Add" onclick="createNewProduct()">
 		</form>
 	</div>
+
+	<script src="scripts.js" type="text/javascript"></script>
 </body>
 </html>
