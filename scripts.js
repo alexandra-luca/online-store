@@ -1,6 +1,7 @@
 function hideAllPages() {
 	document.getElementById("products").setAttribute("style", "display: none");
 	document.getElementById("new-product").setAttribute("style", "display: none");
+	document.getElementById("my-cart").setAttribute("style", "display: none");	
 }
 
 function displayProducts() {
@@ -11,6 +12,11 @@ function displayProducts() {
 function displayNewProduct() {
 	hideAllPages();
 	document.getElementById("new-product").setAttribute("style", "");
+}
+
+function displayMyCart() {
+	hideAllPages();
+	document.getElementById("my-cart").setAttribute("style", "");
 }
 
 products = [];
@@ -48,7 +54,7 @@ function fillProducts(products) {
 				<h3>${product.price}</h3>
 				<p>${product.description}</p>
 				<img src="${product.image_url}" alt="${product.name}">
-				<button type="button">Add to cart</button>
+				<button onclick="addToCart('${product.name}', '${product.price}')" type="button">Add to cart</button>
 			</div>
 		</section>`;
 		container.innerHTML += html;
@@ -74,3 +80,37 @@ function searchProduct() {
 }
 
 my_cart = []
+
+function fillCart() {
+	const container = document.getElementById("my-cart");
+	container.innerHTML = "";
+
+	let innerHTML = "<table>";
+	innerHTML += "<tr><th>Product</th><th>Price</th></tr>";
+
+	my_cart.forEach((product) => {
+		let html = `
+		<tr>
+			<td>${product.name}</td>
+			<td>${product.price}</td>
+		</tr>`;
+		innerHTML += html;
+	});
+
+	innerHTML += "</table>";
+
+	container.innerHTML = innerHTML;
+}
+
+function addToCart(name, price) {
+	let product = {
+		name,
+		price
+	}
+	my_cart.push(product);
+	fillCart();
+}
+
+addToCart("Bottle of water", "$4.99");
+addToCart("Pack of chocolate chips", "$7.99");
+addToCart("Bag of cookies", "$11.99");
