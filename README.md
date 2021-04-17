@@ -16,6 +16,7 @@ Includes new product page and shopping cart.
 * Shopping cart
 * Ability to add/delete products
 * Ability to sort products by name or price, ascending or descending
+* Ability to search products by name substring
 * Data stored in memory (JS local variables)
 
 ## Live demo
