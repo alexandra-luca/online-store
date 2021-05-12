@@ -1,7 +1,5 @@
 # Online Store single page app
 
-## Screenshots
-
 ![Desktop view](ss-online-store-desktop.PNG) 
 
 ## Description
@@ -22,4 +20,3 @@ Includes new product page and shopping cart.
 ## Live demo
 
 A live demo can be accessed at https://alexandra-luca.github.io/online-store
-
